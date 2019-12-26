@@ -1,15 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="" />
+    <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/playshop_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/playshop.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VVo7cr50nkYbYEOFCm1txejBoo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -18,7 +53,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:playshop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:playshop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@553ea476" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -35,11 +80,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577347457098</updated>
-      <workItem from="1577347461921" duration="3000" />
+      <workItem from="1577347461921" duration="2737000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="568" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577350469081">
+      <screen x="77" y="34" width="1843" height="1046" />
+    </state>
+    <state x="568" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1577350469081" />
+    <state x="511" y="164" width="965" height="783" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1577348400921">
+      <screen x="77" y="34" width="1843" height="1046" />
+    </state>
+    <state x="511" y="164" width="965" height="783" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1577348400921" />
+    <state width="318" height="572" key="HiddenNamespacesPopup" timestamp="1577349503129">
+      <screen x="77" y="34" width="1843" height="1046" />
+    </state>
+    <state width="318" height="572" key="HiddenNamespacesPopup/77.34.1843.1046@77.34.1843.1046" timestamp="1577349503129" />
     <state x="578" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1577347467094">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
