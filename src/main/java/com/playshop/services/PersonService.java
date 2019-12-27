@@ -12,9 +12,9 @@ public interface PersonService {
 
     Person signUp(String name, String password) throws DBException;
 
-    Person signUp(String name, String password, boolean admin) throws DBException;
+    Person signUp(String name, String password, String role) throws DBException;
 
-    Item getItem(long id) throws DBException;
+    Item getItem(int id) throws DBException;
 
     List<Item> getItems(Person person) throws DBException;
 }

@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PurchaseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/PersonServiceImplements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/servlets/ItemServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/servlets/PurchaseServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/servlets/SignInServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/servlets/SignUpServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/services/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/PersonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +113,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/playshop/servlets" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -107,6 +123,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.playshop.exceptions" />
       <recent name="com.playshop.services" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/playshop/servlets" />
     </key>
   </component>
   <component name="RunManager">
@@ -157,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577347457098</updated>
       <workItem from="1577347461921" duration="10965000" />
-      <workItem from="1577431763219" duration="14311000" />
+      <workItem from="1577431763219" duration="18795000" />
     </task>
     <servers />
   </component>
@@ -184,10 +203,10 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="614" y="343" width="758" height="425" key="#com.intellij.fileTypes.FileTypeChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1577352977857" />
-    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser" timestamp="1577443408461">
+    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser" timestamp="1577450157861">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1577443408461" />
+    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1577450157861" />
     <state x="511" y="164" width="965" height="783" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1577348400921">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>

@@ -4,14 +4,12 @@ public class Person {
 
     private String username;
     private String password;
-    private String email;
-    private boolean admin;
+    private String role;
 
-    public Person(String n, String p, String e) {
+    public Person(String n, String p, String a) {
         username = n;
         password = p;
-        email = e;
-        admin = false;
+        role = a;
     }
 
     public String getUsername() {
@@ -22,11 +20,5 @@ public class Person {
         return password;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public boolean isAdmin() {
-        return admin;
-    }
+    public String getRole() {return role;}
 }

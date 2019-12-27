@@ -16,14 +16,14 @@ public class PersonDAO {
 
     public Person get(int id) throws SQLException {
         ResultSet res = statement.executeQuery("SELECT * FROM users WHERE id=" + id);
-        return new Person(res.getString("name"), res.getString("password"), res.getString("email"));
+        return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
     public List<Person> getAll() throws SQLException {
         ResultSet res = statement.executeQuery("SELECT *FROM users");
         ArrayList<Person> list = new ArrayList<>();
         while (!res.isAfterLast()) {
-            list.add(new Person(res.getString("name"), res.getString("password"), res.getString("email")));
+            list.add(new Person(res.getString("name"), res.getString("password"), res.getString("role")));
             res.next();
         }
         return list;
@@ -31,11 +31,13 @@ public class PersonDAO {
 
     public Person getByName(String name) throws SQLException {
         ResultSet res = statement.executeQuery("SELECT * FROM users WHERE name=" + name);
-        return new Person(res.getString("name"), res.getString("password"), res.getString("email"));
+        return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
-    public void create(Person person) throws SQLException {
-        statement.execute("INSERT INTO users(name, password, email) VALUES (" + person.getUsername() + ", " + person.getPassword() + ", " + person.getEmail() + ")");
+    public int create(Person person) throws SQLException {
+        statement.execute("INSERT INTO users(name, password, role) VALUES (" + person.getUsername() + ", " + person.getPassword() + ", " + person.getRole() + ")");
+        ResultSet res = statement.executeQuery("SELECT id FROM users WHERE name=" + person.getUsername());
+        return res.getInt("id");
     }
 
     public void delete(int id) throws SQLException {
