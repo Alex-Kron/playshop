@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/ItemDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Purchase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/exceptions/DBException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/exceptions/ServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/DBService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/PersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +53,14 @@
         <item name="playshop@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="playshop: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="katalog: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="playshop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="playshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="purchase: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -52,6 +68,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -83,11 +100,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Playtox/webstore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.playshop.exceptions" />
+      <recent name="com.playshop.services" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -119,16 +142,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:playshop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:playshop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@58728557" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:playshop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@553ea476" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -146,7 +159,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577347457098</updated>
-      <workItem from="1577347461921" duration="8543000" />
+      <workItem from="1577347461921" duration="10965000" />
+      <workItem from="1577431763219" duration="11511000" />
     </task>
     <servers />
   </component>
@@ -169,6 +183,10 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="614" y="343" width="758" height="425" key="#com.intellij.fileTypes.FileTypeChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1577352977857" />
+    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser" timestamp="1577443408461">
+      <screen x="77" y="34" width="1843" height="1046" />
+    </state>
+    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1577443408461" />
     <state x="511" y="164" width="965" height="783" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1577348400921">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
@@ -177,22 +195,22 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="728" y="257" width="530" height="598" key="FileChooserDialogImpl/77.34.1843.1046@77.34.1843.1046" timestamp="1577351593095" />
-    <state width="1787" height="263" key="GridCell.Tab.0.bottom" timestamp="1577358722576">
+    <state width="1224" height="263" key="GridCell.Tab.0.bottom" timestamp="1577443312760">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1787" height="263" key="GridCell.Tab.0.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1577358722576" />
-    <state width="1787" height="263" key="GridCell.Tab.0.center" timestamp="1577358722575">
+    <state width="1224" height="263" key="GridCell.Tab.0.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1577443312760" />
+    <state width="1224" height="263" key="GridCell.Tab.0.center" timestamp="1577443312759">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1787" height="263" key="GridCell.Tab.0.center/77.34.1843.1046@77.34.1843.1046" timestamp="1577358722575" />
-    <state width="1787" height="263" key="GridCell.Tab.0.left" timestamp="1577358722575">
+    <state width="1224" height="263" key="GridCell.Tab.0.center/77.34.1843.1046@77.34.1843.1046" timestamp="1577443312759" />
+    <state width="1224" height="263" key="GridCell.Tab.0.left" timestamp="1577443312758">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1787" height="263" key="GridCell.Tab.0.left/77.34.1843.1046@77.34.1843.1046" timestamp="1577358722575" />
-    <state width="1787" height="263" key="GridCell.Tab.0.right" timestamp="1577358722575">
+    <state width="1224" height="263" key="GridCell.Tab.0.left/77.34.1843.1046@77.34.1843.1046" timestamp="1577443312758" />
+    <state width="1224" height="263" key="GridCell.Tab.0.right" timestamp="1577443312760">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1787" height="263" key="GridCell.Tab.0.right/77.34.1843.1046@77.34.1843.1046" timestamp="1577358722575" />
+    <state width="1224" height="263" key="GridCell.Tab.0.right/77.34.1843.1046@77.34.1843.1046" timestamp="1577443312760" />
     <state width="318" height="572" key="HiddenNamespacesPopup" timestamp="1577349503129">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
@@ -209,9 +227,9 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="578" y="346" key="com.intellij.ide.util.TipDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1577347467094" />
-    <state x="578" y="251" width="840" height="1034" key="run.anything.popup" timestamp="1577353187505">
+    <state x="578" y="251" width="840" height="1034" key="run.anything.popup" timestamp="1577446186630">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state x="578" y="251" width="840" height="1034" key="run.anything.popup/77.34.1843.1046@77.34.1843.1046" timestamp="1577353187505" />
+    <state x="578" y="251" width="840" height="1034" key="run.anything.popup/77.34.1843.1046@77.34.1843.1046" timestamp="1577446186630" />
   </component>
 </project>
