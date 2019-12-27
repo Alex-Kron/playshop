@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/ItemDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/exceptions/DBException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/exceptions/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/DBService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/PersonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PurchaseDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +51,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="playshop: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="purchase: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="playshop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="playshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -160,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577347457098</updated>
       <workItem from="1577347461921" duration="10965000" />
-      <workItem from="1577431763219" duration="11511000" />
+      <workItem from="1577431763219" duration="14311000" />
     </task>
     <servers />
   </component>
@@ -175,6 +172,10 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="493" y="136" width="1000" height="839" key="#Project_Structure/77.34.1843.1046@77.34.1843.1046" timestamp="1577357652570" />
+    <state x="666" y="257" width="655" height="598" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577448878249">
+      <screen x="77" y="34" width="1843" height="1046" />
+    </state>
+    <state x="666" y="257" width="655" height="598" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1577448878249" />
     <state x="568" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577350469081">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
