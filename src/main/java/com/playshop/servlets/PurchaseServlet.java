@@ -2,6 +2,7 @@ package com.playshop.servlets;
 
 import com.playshop.exceptions.DBException;
 import com.playshop.services.AdminService;
+import com.playshop.services.AdminServiceImplements;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +20,7 @@ public class PurchaseServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
-            AdminService adminService = //добавить AdminServiceImplements();
-            assert adminService != null;
+            AdminService adminService = new AdminServiceImplements();
             try {
                 request.setAttribute("purchases", adminService.getPurchases());
                 request.getRequestDispatcher("/WEB-INF/jsp/view_purchases.jsp").forward(request, response);

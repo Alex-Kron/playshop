@@ -29,8 +29,10 @@ public class PurchaseDAO {
         return list;
     }
 
-    public void create(Purchase purchase) throws SQLException {
+    public int create(Purchase purchase) throws SQLException {
         statement.execute("INSERT INTO purchase(user_id, item_id, quantity, cost) VALUES(" + purchase.getUserID() + ", " + purchase.getItemID() + ", " + purchase.getQuantity() + ", " + purchase.getCost() + ")");
+        ResultSet res = statement.executeQuery("SELECT id FROM purchase WHERE user_id=" + purchase.getUserID() + " AND item_id=" + purchase.getItemID());
+        return res.getInt("id");
     }
 
     public void delete(int id) throws SQLException {

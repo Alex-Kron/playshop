@@ -27,4 +27,20 @@ public class Item {
     public float getCost() {
         return cost;
     }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
 }

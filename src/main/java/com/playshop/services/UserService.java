@@ -5,6 +5,5 @@ import com.playshop.exceptions.DBException;
 import com.playshop.exceptions.ServiceException;
 
 public interface UserService extends PersonService {
-
-    void setPurchase(long itemId, int amount, Person person) throws DBException, ServiceException;
+    void setPurchase(int itemId, int amount, Person person) throws DBException, ServiceException;
 }

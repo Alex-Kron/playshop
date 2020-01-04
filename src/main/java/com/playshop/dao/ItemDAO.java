@@ -19,6 +19,11 @@ public class ItemDAO {
         return new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"));
     }
 
+    public int getId(Item i) throws SQLException {
+        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name=" + i.getName() + " AND cost=" + i.getCost());
+        return res.getInt("id");
+    }
+
     public List<Item> getAll() throws SQLException {
         ResultSet res = statement.executeQuery("SELECT * FROM katalog");
         ArrayList<Item> list = new ArrayList<>();
@@ -29,8 +34,10 @@ public class ItemDAO {
         return list;
     }
 
-    public void create(Item i) throws SQLException {
+    public int create(Item i) throws SQLException {
         statement.execute("INSERT INTO katalog(quantity,name,description,cost) VALUES(" + i.getQuantity() + ", " + i.getName() + ", " + i.getDescription() + ", " + i.getCost() + ")");
+        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name=" + i.getName() + " AND cost=" + i.getCost());
+        return res.getInt("id");
     }
 
     public void update(int id, Item i) throws SQLException {

@@ -31,8 +31,6 @@ public class SignUpServlet extends HttpServlet {
         }
 
         PersonService personService = new PersonServiceImplements();
-
-        assert personService != null;
         Person person;
         try{
             person = personService.signUp(login, password);

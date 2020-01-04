@@ -6,11 +6,10 @@ public class Purchase {
     private int quantity;
     private float cost;
 
-    public Purchase(int uid, int iid, int q, float c) {
+    public Purchase(int uid, int iid, int q) {
         userID = uid;
         itemID = iid;
         quantity = q;
-        cost = c;
     }
 
     public int getUserID() {
@@ -23,9 +22,5 @@ public class Purchase {
 
     public int getQuantity() {
         return quantity;
-    }
-
-    public float getCost() {
-        return cost;
     }
 }

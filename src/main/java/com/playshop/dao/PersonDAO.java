@@ -34,10 +34,19 @@ public class PersonDAO {
         return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
+    public int getId(Person person) throws SQLException {
+        ResultSet res = statement.executeQuery("SELECT id FROM users WHERE name=" + person.getUsername() + " AND password=" + person.getPassword());
+        return res.getInt("id");
+    }
+
     public int create(Person person) throws SQLException {
         statement.execute("INSERT INTO users(name, password, role) VALUES (" + person.getUsername() + ", " + person.getPassword() + ", " + person.getRole() + ")");
         ResultSet res = statement.executeQuery("SELECT id FROM users WHERE name=" + person.getUsername());
         return res.getInt("id");
+    }
+
+    public void update(int id, Person person) throws SQLException {
+        statement.execute("UPDATE users SET name=" + person.getUsername() + ", password=" + person.getPassword() + ", role=" + person.getRole() + " WHERE id=" + id);
     }
 
     public void delete(int id) throws SQLException {

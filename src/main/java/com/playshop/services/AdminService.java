@@ -7,15 +7,19 @@ import java.util.List;
 
 public interface AdminService extends PersonService {
 
-    long createItem(Item item) throws DBException;
+    int createItem(Item item) throws DBException;
 
-    void updateItem(Item item) throws DBException;
+    int getItemId(Item item) throws DBException;
 
-    void deleteItem(long id) throws DBException;
+    void updateItem(int id, Item item) throws DBException;
+
+    void deleteItem(int id) throws DBException;
 
     void deleteAllItems() throws DBException;
 
     void deleteAllPersons() throws DBException;
+
+    void setAdmin(int id) throws DBException;
 
     void deleteAllPurchases() throws DBException;
 

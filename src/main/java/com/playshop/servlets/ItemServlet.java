@@ -4,9 +4,7 @@ import com.playshop.entity.Item;
 import com.playshop.entity.Person;
 import com.playshop.exceptions.DBException;
 import com.playshop.exceptions.ServiceException;
-import com.playshop.services.AdminService;
-import com.playshop.services.PersonService;
-import com.playshop.services.UserService;
+import com.playshop.services.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.math.BigDecimal;
 
 public class ItemServlet extends HttpServlet {
 
@@ -23,10 +20,10 @@ public class ItemServlet extends HttpServlet {
         try {
             request.setCharacterEncoding("UTF-8");
             Item item = getItem(request);
-            AdminService adminService; //добавить AdminServiceImplements()
-
-            if (item() > 0) {
-                adminService.updateItem(item);
+            AdminService adminService = new AdminServiceImplements();
+            int id = adminService.getItemId(item);
+            if (id > 0) {
+                adminService.updateItem(id, item);
             } else {
                 adminService.createItem(item);
             }
@@ -37,7 +34,7 @@ public class ItemServlet extends HttpServlet {
                 Item item = new Item("","",0, 0);
                 request.setAttribute("item", item);
                 request.setAttribute("exception", "Input data is not correct");
-                request.getRequestDispatcher("/WEB-INF/jsp/edit_item.jsp").forward(request, response);
+                request.getRequestDispatcher("").forward(request, response);
             } catch (Exception e1) {
                 response.sendRedirect("error");
             }
@@ -51,13 +48,11 @@ public class ItemServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         Person person = (Person) session.getAttribute("person");
         String action = request.getParameter("action");
-        PersonService personService; // добавить PersonServiceImplements
-
-        assert personService != null;
+        PersonService personService = new PersonServiceImplements();
         if (action == null) {
             try {
                 request.setAttribute("items", personService.getItems(person));
-                request.getRequestDispatcher("/WEB-INF/jsp/view_items.jsp").forward(request, response);
+                request.getRequestDispatcher("").forward(request, response);
             } catch (DBException e) {
                 response.sendRedirect("error");
             }
@@ -68,9 +63,9 @@ public class ItemServlet extends HttpServlet {
 
         if (action.equalsIgnoreCase("view") && itemIdString != null) {
             try {
-                Item item = personService.getItem(Long.parseLong(itemIdString));
+                Item item = personService.getItem(Integer.parseInt(itemIdString));
                 request.setAttribute("item", item);
-                request.getRequestDispatcher("/WEB-INF/jsp/view_item.jsp").forward(request, response);
+                request.getRequestDispatcher("").forward(request, response);
             } catch (DBException e) {
                 response.sendRedirect("error");
             }
@@ -79,12 +74,10 @@ public class ItemServlet extends HttpServlet {
 
         switch (person.getRole()) {
             case "admin":
-                AdminService adminService; //добавить AdminServiceImplements
-
-                assert adminService != null;
+                AdminService adminService = new AdminServiceImplements();
                 if (action.equalsIgnoreCase("delete") && itemIdString != null) {
                     try {
-                        adminService.deleteItem(Long.parseLong(itemIdString));
+                        adminService.deleteItem(Integer.parseInt(itemIdString));
                         response.sendRedirect("items");
                     } catch (DBException e) {
                         response.sendRedirect("error");
@@ -93,25 +86,24 @@ public class ItemServlet extends HttpServlet {
                     try {
                         Item item = adminService.getItem(Integer.parseInt(itemIdString));
                         request.setAttribute("item", item);
-                        request.getRequestDispatcher("/WEB-INF/jsp/edit_item.jsp").forward(request, response);
+                        request.getRequestDispatcher("").forward(request, response);
                     } catch (DBException e) {
                         response.sendRedirect("error");
                     }
 
                 } else if (action.equalsIgnoreCase("add")) {
-                    Item item = new Item("", "", 0, 0,);
+                    Item item = new Item("", "", 0, 0);
                     request.setAttribute("item", item);
-                    request.getRequestDispatcher("/WEB-INF/jsp/edit_item.jsp").forward(request, response);
+                    request.getRequestDispatcher("").forward(request, response);
                 } else {
                     response.sendRedirect("error");
                 }
                 break;
             case "user":
-                UserService userService; //добавить UserServiceImplements
-                assert userService != null;
+                UserService userService = new UserServiceImplements();
                 if (action.equalsIgnoreCase("buy") && itemIdString != null) {
                     try {
-                        userService.setPurchase(Long.parseLong(itemIdString), 1, person);
+                        userService.setPurchase(Integer.parseInt(itemIdString), 1, person);
                         response.sendRedirect("items");
                     } catch (DBException | ServiceException e) {
                         response.sendRedirect("error");
