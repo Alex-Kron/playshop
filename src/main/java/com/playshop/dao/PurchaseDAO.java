@@ -16,21 +16,21 @@ public class PurchaseDAO {
 
     public Purchase get(int id) throws SQLException {
         ResultSet res = statement.executeQuery("SELECT * FROM purchase WHERE id=" + id);
-        return new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"), res.getFloat("cost"));
+        return new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"));
     }
 
     public List<Purchase> getAll() throws SQLException {
         ResultSet res = statement.executeQuery("SELECT * FROM purchase");
         ArrayList<Purchase> list = new ArrayList<>();
         while (!res.isAfterLast()) {
-            list.add(new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"), res.getFloat("cost")));
+            list.add(new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity")));
             res.next();
         }
         return list;
     }
 
     public int create(Purchase purchase) throws SQLException {
-        statement.execute("INSERT INTO purchase(user_id, item_id, quantity, cost) VALUES(" + purchase.getUserID() + ", " + purchase.getItemID() + ", " + purchase.getQuantity() + ", " + purchase.getCost() + ")");
+        statement.execute("INSERT INTO purchase(user_id, item_id, quantity, cost) VALUES(" + purchase.getUserID() + ", " + purchase.getItemID() + ", " + purchase.getQuantity()  + ")");
         ResultSet res = statement.executeQuery("SELECT id FROM purchase WHERE user_id=" + purchase.getUserID() + " AND item_id=" + purchase.getItemID());
         return res.getInt("id");
     }
