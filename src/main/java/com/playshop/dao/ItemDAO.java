@@ -20,7 +20,7 @@ public class ItemDAO {
     }
 
     public int getId(Item i) throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name=" + i.getName() + " AND cost=" + i.getCost());
+        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name='" + i.getName() + "' AND cost=" + i.getCost());
         return res.getInt("id");
     }
 
@@ -35,13 +35,13 @@ public class ItemDAO {
     }
 
     public int create(Item i) throws SQLException {
-        statement.execute("INSERT INTO katalog(quantity,name,description,cost) VALUES(" + i.getQuantity() + ", " + i.getName() + ", " + i.getDescription() + ", " + i.getCost() + ")");
-        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name=" + i.getName() + " AND cost=" + i.getCost());
+        statement.execute("INSERT INTO katalog(quantity,name,description,cost) VALUES(" + i.getQuantity() + ", '" + i.getName() + "', '" + i.getDescription() + "', " + i.getCost() + ")");
+        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name='" + i.getName() + "' AND cost=" + i.getCost());
         return res.getInt("id");
     }
 
     public void update(int id, Item i) throws SQLException {
-        statement.execute("UPDATE katalog SET name=" + i.getName() + ", description=" + i.getDescription() + ", quantity =" + i.getQuantity() + ", cost =" + i.getCost() + " WHERE id=" + id);
+        statement.execute("UPDATE katalog SET name='" + i.getName() + "', description='" + i.getDescription() + "', quantity =" + i.getQuantity() + ", cost =" + i.getCost() + " WHERE id=" + id);
     }
 
     public void delete(int id) throws SQLException {

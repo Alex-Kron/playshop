@@ -3,24 +3,27 @@ package com.playshop.dao;
 import com.playshop.entity.Person;
 import com.playshop.services.DBService;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersonDAO {
-    private Statement statement = DBService.getStatement();
+    private Connection connection = DBService.getConnection();
 
     public PersonDAO() throws SQLException {}
 
     public Person get(int id) throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT * FROM users WHERE id=" + id);
+        String sql = "SELECT * FROM users WHERE id=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, id);
+        ResultSet res = statement.executeQuery();
         return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
     public List<Person> getAll() throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT *FROM users");
+        String sql = "SELECT *FROM users";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        ResultSet res = statement.executeQuery();
         ArrayList<Person> list = new ArrayList<>();
         while (!res.isAfterLast()) {
             list.add(new Person(res.getString("name"), res.getString("password"), res.getString("role")));
@@ -30,31 +33,53 @@ public class PersonDAO {
     }
 
     public Person getByName(String name) throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT * FROM users WHERE name=" + name);
+        String sql = "SELECT * FROM users WHERE name=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, name);
+        ResultSet res = statement.executeQuery();
         return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
     public int getId(Person person) throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT id FROM users WHERE name=" + person.getUsername() + " AND password=" + person.getPassword());
+        String sql = "SELECT id FROM users WHERE name=? AND password=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, person.getUsername());
+        statement.setString(2, person.getPassword());
+        ResultSet res = statement.executeQuery();
         return res.getInt("id");
     }
 
     public int create(Person person) throws SQLException {
-        statement.execute("INSERT INTO users(name, password, role) VALUES (" + person.getUsername() + ", " + person.getPassword() + ", " + person.getRole() + ")");
-        ResultSet res = statement.executeQuery("SELECT id FROM users WHERE name=" + person.getUsername());
-        return res.getInt("id");
+        String sql = "INSERT INTO users(name, password, role) VALUES (?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, person.getUsername());
+        statement.setString(2, person.getPassword());
+        statement.setString(3, person.getRole());
+        statement.execute();
+        return getId(person);
     }
 
     public void update(int id, Person person) throws SQLException {
-        statement.execute("UPDATE users SET name=" + person.getUsername() + ", password=" + person.getPassword() + ", role=" + person.getRole() + " WHERE id=" + id);
+        String sql = "UPDATE users SET name=?, password=?, role=? WHERE id=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, person.getUsername());
+        statement.setString(2, person.getPassword());
+        statement.setString(3, person.getRole());
+        statement.setInt(4, id);
+        statement.execute();
     }
 
     public void delete(int id) throws SQLException {
-        statement.execute("DELETE FROM users WHERE id=" + id);
+        String sql = "DELETE FROM users WHERE id=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, id);
+        statement.execute();
     }
 
     public void deleteAll() throws SQLException {
-        statement.execute("DELETE FROM users");
+        String sql = "DELETE FROM users";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.execute();
     }
 
 }

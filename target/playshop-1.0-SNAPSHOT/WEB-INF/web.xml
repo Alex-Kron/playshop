@@ -8,7 +8,7 @@
     <servlet>
         <servlet-name>SignInServlet</servlet-name>
         <servlet-class>com.playshop.web.SignInServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>SignInServlet</servlet-name>
