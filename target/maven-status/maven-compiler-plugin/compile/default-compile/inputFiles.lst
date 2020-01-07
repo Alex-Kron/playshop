@@ -9,7 +9,6 @@
 /home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/dao/PurchaseDAO.java
 /home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/web/ItemServlet.java
 /home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/services/DBService.java
-/home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/web/TestServlet.java
 /home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/dao/ItemDAO.java
 /home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/web/SignUpServlet.java
 /home/kron/Labs/Programming/Kurs/src/main/java/com/playshop/exceptions/DBException.java

@@ -1,4 +1,3 @@
-com/playshop/web/TestServlet.class
 com/playshop/web/PurchaseServlet.class
 com/playshop/dao/PersonDAO.class
 com/playshop/web/SignUpServlet.class

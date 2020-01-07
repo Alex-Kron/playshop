@@ -6,6 +6,7 @@
     </head>
 
     <body>
+        <form method="post" action="signin">
         <table>
             <tr>
                 <td colspan="2">Sign in to Playshop application:</td>
@@ -24,13 +25,14 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Sign in"/>&nbsp;<a href="sign_up.jsp">Sign up</a></td>
+                <td><input type="submit" value="Sign in"/>&nbsp;<a href="signup">Sign up</a></td>
             </tr>
         </table>
+        </form>
         <%
-            String ex = request.getParameter("exception");
-            if (ex != null) { %>
-            <p style="color: crimson"><% out.print(ex); %></p>
-            <% } %>
+            if (request.getAttribute("exception") != null) {
+            out.println("<p style=\"color: crimson\">" + request.getAttribute("exception") + "</p>");
+            }
+        %>
     </body>
 </html>

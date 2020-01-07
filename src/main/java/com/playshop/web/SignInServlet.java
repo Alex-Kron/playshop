@@ -22,7 +22,7 @@ public class SignInServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         if (login == null || password == null || login.isEmpty() || password.isEmpty()){
-            request.setAttribute("exception", "Not autorized");
+            request.setAttribute("exception", "Please check that all fields are filled in correctly and resend.");
             request.getRequestDispatcher("/sign_in.jsp").forward(request, response);
             return;
         }
@@ -40,7 +40,7 @@ public class SignInServlet extends HttpServlet {
             request.getSession(true).setAttribute("person", person);
             response.sendRedirect("items");
         } else {
-            request.setAttribute("exception", "Not autorized");
+            request.setAttribute("exception", "The entered data is not correct.");
             request.getRequestDispatcher("/sign_in.jsp").forward(request, response);
         }
     }

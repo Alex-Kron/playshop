@@ -8,6 +8,7 @@
     <servlet>
         <servlet-name>SignInServlet</servlet-name>
         <servlet-class>com.playshop.web.SignInServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>SignInServlet</servlet-name>
@@ -22,17 +23,5 @@
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
-    
-    <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>com.playshop.web.TestServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/test</url-pattern>
-    </servlet-mapping>
-    
-    <welcome-file-list>
-        <welcome-file>SignInServlet</welcome-file>
-    </welcome-file-list>
+
 </web-app>

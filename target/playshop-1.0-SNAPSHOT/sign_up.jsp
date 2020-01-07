@@ -1,43 +1,42 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" language="java" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
-    <head>
-        <title>Sign in page</title>
-    </head>
-
-    <body>
-        <table>
-            <tr>
-                <td colspan="2">Sign up to the Playshop:</td>
-            </tr>
-            <tr>
-                <td>Login:</td>
-                <td><label>
-                    <input required type="text" name="login"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><label>
-                    <input required type="password" name="password"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td>Retype password:</td>
-                <td><label>
-                    <input required type="password" name="retype_password"/>
-                </label></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Sign up"/>&nbsp;<a href="sign_in.jsp">Sign in</a></td>
-            </tr>
-        </table>
-        <%String ex = request.getParameter("exception");
-        if (ex != null) { %>
-            <p style="color: crimson">
-                <% out.print(ex); %>
-            </p>
-        <%}%>
-    </body>
+<head>
+    <title>Sign up page</title>
+</head>
+<body>
+<form method="post" action="signup">
+    <table>
+        <tr>
+            <td colspan="2">Sign up to the Playshop:</td>
+        </tr>
+        <tr>
+            <td>Login:</td>
+            <td><label>
+                <input required type="text" name="login"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><label>
+                <input required type="password" name="password"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td>Retype password:</td>
+            <td><label>
+                <input required type="password" name="retype_password"/>
+            </label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Sign un"><a href="signin">Sign in</a></td>
+        </tr>
+    </table>
+</form>
+<%
+    if (request.getAttribute("exception") != null) {
+    out.println("<p style=\"color: crimson\">" + request.getAttribute("exception") + "</p>");
+    }
+%>
+</body>
 </html>
