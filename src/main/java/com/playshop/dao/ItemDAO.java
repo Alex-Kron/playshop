@@ -17,8 +17,11 @@ public class ItemDAO {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, id);
         ResultSet res = statement.executeQuery();
-        res.first();
-        return new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"));
+        if (res.first()) {
+            return new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"));
+        } else {
+            return null;
+        }
     }
 
     public int getId(Item i) throws SQLException {
@@ -27,8 +30,11 @@ public class ItemDAO {
         statement.setString(1, i.getName());
         statement.setFloat(2, i.getCost());
         ResultSet res = statement.executeQuery();
-        res.first();
-        return res.getInt("id");
+        if (res.first()) {
+            return res.getInt("id");
+        } else {
+            return -1;
+        }
     }
 
     public List<Item> getAll() throws SQLException {
@@ -39,7 +45,11 @@ public class ItemDAO {
         while (res.next()) {
             list.add(new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost")));
         }
-        return list;
+        if (!list.isEmpty()) {
+            return list;
+        } else {
+            return null;
+        }
     }
 
     public int create(Item i) throws SQLException {

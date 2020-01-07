@@ -17,8 +17,11 @@ public class PersonDAO {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, id);
         ResultSet res = statement.executeQuery();
-        res.first();
-        return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
+        if (res.first()) {
+            return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
+        } else {
+            return null;
+        }
     }
 
     public List<Person> getAll() throws SQLException {
@@ -29,7 +32,11 @@ public class PersonDAO {
         while (res.next()) {
             list.add(new Person(res.getString("name"), res.getString("password"), res.getString("role")));
         }
-        return list;
+        if (!list.isEmpty()) {
+            return list;
+        } else {
+            return null;
+        }
     }
 
     public Person getByName(String name) throws SQLException {
@@ -37,8 +44,11 @@ public class PersonDAO {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, name);
         ResultSet res = statement.executeQuery();
-        res.first();
-        return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
+        if (res.first()) {
+            return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
+        } else {
+            return null;
+        }
     }
 
     public int getId(Person person) throws SQLException {
@@ -47,8 +57,11 @@ public class PersonDAO {
         statement.setString(1, person.getUsername());
         statement.setString(2, person.getPassword());
         ResultSet res = statement.executeQuery();
-        res.first();
-        return res.getInt("id");
+        if (res.first()) {
+            return res.getInt("id");
+        } else {
+            return -1;
+        }
     }
 
     public int create(Person person) throws SQLException {

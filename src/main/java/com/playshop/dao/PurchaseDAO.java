@@ -17,8 +17,11 @@ public class PurchaseDAO {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, id);
         ResultSet res = statement.executeQuery();
-        res.first();
-        return new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"));
+        if (res.first()) {
+            return new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"));
+        } else {
+            return null;
+        }
     }
 
     public List<Purchase> getAll() throws SQLException {
@@ -29,7 +32,11 @@ public class PurchaseDAO {
         while (res.next()) {
             list.add(new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity")));
         }
-        return list;
+        if (!list.isEmpty()) {
+            return list;
+        } else {
+            return null;
+        }
     }
 
     public int getId(Purchase purchase) throws SQLException {
@@ -38,20 +45,23 @@ public class PurchaseDAO {
         statement.setInt(1, purchase.getUserID());
         statement.setInt(2, purchase.getItemID());
         ResultSet res = statement.executeQuery();
-        res.first();
-        return res.getInt("id");
+        if (res.first()) {
+            return res.getInt("id");
+        } else {
+            return -1;
+        }
     }
 
     public int create(Purchase purchase) throws SQLException {
         String sql = "INSERT INTO purchase(user_id, item_id, quantity, cost) VALUES(?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(sql);
-        statement.execute();
         statement.setInt(1,purchase.getUserID());
         statement.setInt(2,purchase.getItemID());
         statement.setInt(3,purchase.getQuantity());
         ItemDAO tmp = new ItemDAO();
         float cost = tmp.get(purchase.getItemID()).getCost() * purchase.getQuantity();
         statement.setFloat(4, cost);
+        statement.execute();
         return getId(purchase);
     }
 
