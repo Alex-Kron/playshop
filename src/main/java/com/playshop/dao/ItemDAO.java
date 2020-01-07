@@ -3,52 +3,77 @@ package com.playshop.dao;
 import com.playshop.entity.Item;
 import com.playshop.services.DBService;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ItemDAO {
-    private Statement statement = DBService.getStatement();
+    private Connection connection = DBService.getConnection();
 
     public ItemDAO() throws SQLException {}
 
     public Item get(int id) throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT * FROM katalog WHERE id=" + id);
+        String sql = "SELECT * FROM katalog WHERE id=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, id);
+        ResultSet res = statement.executeQuery();
+        res.first();
         return new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"));
     }
 
     public int getId(Item i) throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name='" + i.getName() + "' AND cost=" + i.getCost());
+        String sql = "SELECT id FROM katalog WHERE name=? AND cost=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, i.getName());
+        statement.setFloat(2, i.getCost());
+        ResultSet res = statement.executeQuery();
+        res.first();
         return res.getInt("id");
     }
 
     public List<Item> getAll() throws SQLException {
-        ResultSet res = statement.executeQuery("SELECT * FROM katalog");
+        String sql = "SELECT * FROM katalog";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        ResultSet res = statement.executeQuery();
         ArrayList<Item> list = new ArrayList<>();
-        while (!res.isAfterLast()) {
+        while (res.next()) {
             list.add(new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost")));
-            res.next();
         }
         return list;
     }
 
     public int create(Item i) throws SQLException {
-        statement.execute("INSERT INTO katalog(quantity,name,description,cost) VALUES(" + i.getQuantity() + ", '" + i.getName() + "', '" + i.getDescription() + "', " + i.getCost() + ")");
-        ResultSet res = statement.executeQuery("SELECT id FROM katalog WHERE name='" + i.getName() + "' AND cost=" + i.getCost());
-        return res.getInt("id");
+        String sql = "INSERT INTO katalog(quantity,name,description,cost) VALUES(?,?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, i.getQuantity());
+        statement.setString(2, i.getName());
+        statement.setString(3, i.getDescription());
+        statement.setFloat(4, i.getCost());
+        statement.execute();
+        return getId(i);
     }
 
     public void update(int id, Item i) throws SQLException {
-        statement.execute("UPDATE katalog SET name='" + i.getName() + "', description='" + i.getDescription() + "', quantity =" + i.getQuantity() + ", cost =" + i.getCost() + " WHERE id=" + id);
+        String sql = "UPDATE katalog SET name=?, description=?, quantity=?, cost=? WHERE id=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, i.getName());
+        statement.setString(2, i.getDescription());
+        statement.setInt(3, i.getQuantity());
+        statement.setFloat(4, i.getCost());
+        statement.setInt(5, id);
+        statement.execute();
     }
 
     public void delete(int id) throws SQLException {
-        statement.execute("DELETE FROM katalog WHERE id=" + id);
+        String sql = "DELETE FROM katalog WHERE id=?";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setInt(1, id);
+        statement.execute();
     }
 
     public void deleteAll() throws SQLException {
-        statement.execute("DELETE FROM katalog");
+        String sql = "DELETE FROM katalog";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.execute();
     }
 }

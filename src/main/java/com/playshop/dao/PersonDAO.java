@@ -17,17 +17,17 @@ public class PersonDAO {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setInt(1, id);
         ResultSet res = statement.executeQuery();
+        res.first();
         return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
     public List<Person> getAll() throws SQLException {
-        String sql = "SELECT *FROM users";
+        String sql = "SELECT * FROM users";
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet res = statement.executeQuery();
         ArrayList<Person> list = new ArrayList<>();
-        while (!res.isAfterLast()) {
+        while (res.next()) {
             list.add(new Person(res.getString("name"), res.getString("password"), res.getString("role")));
-            res.next();
         }
         return list;
     }
@@ -37,6 +37,7 @@ public class PersonDAO {
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, name);
         ResultSet res = statement.executeQuery();
+        res.first();
         return new Person(res.getString("name"), res.getString("password"), res.getString("role"));
     }
 
@@ -46,6 +47,7 @@ public class PersonDAO {
         statement.setString(1, person.getUsername());
         statement.setString(2, person.getPassword());
         ResultSet res = statement.executeQuery();
+        res.first();
         return res.getInt("id");
     }
 

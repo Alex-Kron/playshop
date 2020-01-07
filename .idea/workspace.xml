@@ -7,21 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_18.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/dao/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/ItemDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/services/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/DBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PurchaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/PurchaseDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/dao/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/dao/ItemDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/dao/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/dao/PersonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/services/DBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/services/DBService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/dao/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/dao/ItemDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/dao/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/dao/PersonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/services/DBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/services/DBService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +308,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -337,7 +331,7 @@
       <workItem from="1577431763219" duration="21928000" />
       <workItem from="1577970985812" duration="16522000" />
       <workItem from="1578152291600" duration="31702000" />
-      <workItem from="1578394368000" duration="23711000" />
+      <workItem from="1578394368000" duration="26692000" />
     </task>
     <servers />
   </component>
@@ -408,70 +402,70 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="728" y="257" width="1088" height="598" key="FileChooserDialogImpl/77.34.1843.1046@77.34.1843.1046" timestamp="1578416293663" />
-    <state width="1224" height="368" key="GridCell.Tab.0.bottom" timestamp="1578423934359">
+    <state width="1224" height="368" key="GridCell.Tab.0.bottom" timestamp="1578426989998">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934359" />
-    <state width="1224" height="368" key="GridCell.Tab.0.center" timestamp="1578423934357">
+    <state width="1224" height="368" key="GridCell.Tab.0.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578426989998" />
+    <state width="1224" height="368" key="GridCell.Tab.0.center" timestamp="1578426989996">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934357" />
-    <state width="1224" height="368" key="GridCell.Tab.0.left" timestamp="1578423934355">
+    <state width="1224" height="368" key="GridCell.Tab.0.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578426989996" />
+    <state width="1224" height="368" key="GridCell.Tab.0.left" timestamp="1578426989995">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934355" />
-    <state width="1224" height="368" key="GridCell.Tab.0.right" timestamp="1578423934358">
+    <state width="1224" height="368" key="GridCell.Tab.0.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578426989995" />
+    <state width="1224" height="368" key="GridCell.Tab.0.right" timestamp="1578426989997">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934358" />
-    <state width="1224" height="368" key="GridCell.Tab.1.bottom" timestamp="1578423934364">
+    <state width="1224" height="368" key="GridCell.Tab.0.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578426989997" />
+    <state width="1224" height="368" key="GridCell.Tab.1.bottom" timestamp="1578426990004">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934364" />
-    <state width="1224" height="368" key="GridCell.Tab.1.center" timestamp="1578423934362">
+    <state width="1224" height="368" key="GridCell.Tab.1.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990004" />
+    <state width="1224" height="368" key="GridCell.Tab.1.center" timestamp="1578426990002">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934362" />
-    <state width="1224" height="368" key="GridCell.Tab.1.left" timestamp="1578423934361">
+    <state width="1224" height="368" key="GridCell.Tab.1.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990002" />
+    <state width="1224" height="368" key="GridCell.Tab.1.left" timestamp="1578426990000">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934361" />
-    <state width="1224" height="368" key="GridCell.Tab.1.right" timestamp="1578423934363">
+    <state width="1224" height="368" key="GridCell.Tab.1.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990000" />
+    <state width="1224" height="368" key="GridCell.Tab.1.right" timestamp="1578426990003">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934363" />
-    <state width="1224" height="368" key="GridCell.Tab.2.bottom" timestamp="1578423934366">
+    <state width="1224" height="368" key="GridCell.Tab.1.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990003" />
+    <state width="1224" height="368" key="GridCell.Tab.2.bottom" timestamp="1578426990006">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934366" />
-    <state width="1224" height="368" key="GridCell.Tab.2.center" timestamp="1578423934365">
+    <state width="1224" height="368" key="GridCell.Tab.2.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990006" />
+    <state width="1224" height="368" key="GridCell.Tab.2.center" timestamp="1578426990005">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934365" />
-    <state width="1224" height="368" key="GridCell.Tab.2.left" timestamp="1578423934364">
+    <state width="1224" height="368" key="GridCell.Tab.2.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990005" />
+    <state width="1224" height="368" key="GridCell.Tab.2.left" timestamp="1578426990004">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934364" />
-    <state width="1224" height="368" key="GridCell.Tab.2.right" timestamp="1578423934365">
+    <state width="1224" height="368" key="GridCell.Tab.2.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990004" />
+    <state width="1224" height="368" key="GridCell.Tab.2.right" timestamp="1578426990005">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578423934365" />
-    <state width="1224" height="232" key="GridCell.Tab.3.bottom" timestamp="1578423723688">
+    <state width="1224" height="368" key="GridCell.Tab.2.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578426990005" />
+    <state width="1224" height="368" key="GridCell.Tab.3.bottom" timestamp="1578426922512">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="232" key="GridCell.Tab.3.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578423723688" />
-    <state width="1224" height="232" key="GridCell.Tab.3.center" timestamp="1578423723688">
+    <state width="1224" height="368" key="GridCell.Tab.3.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578426922512" />
+    <state width="1224" height="368" key="GridCell.Tab.3.center" timestamp="1578426922510">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="232" key="GridCell.Tab.3.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578423723688" />
-    <state width="1224" height="232" key="GridCell.Tab.3.left" timestamp="1578423723688">
+    <state width="1224" height="368" key="GridCell.Tab.3.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578426922510" />
+    <state width="1224" height="368" key="GridCell.Tab.3.left" timestamp="1578426922508">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="232" key="GridCell.Tab.3.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578423723688" />
-    <state width="1224" height="232" key="GridCell.Tab.3.right" timestamp="1578423723688">
+    <state width="1224" height="368" key="GridCell.Tab.3.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578426922508" />
+    <state width="1224" height="368" key="GridCell.Tab.3.right" timestamp="1578426922511">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="232" key="GridCell.Tab.3.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578423723688" />
+    <state width="1224" height="368" key="GridCell.Tab.3.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578426922511" />
     <state width="1224" height="232" key="GridCell.Tab.4.bottom" timestamp="1578401057471">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
@@ -538,17 +532,10 @@
     <state x="577" y="45" width="840" height="1034" key="search.everywhere.popup/77.34.1843.1046@77.34.1843.1046" timestamp="1578406459690" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/playshop/dao/PersonDAO.java</url>
-          <line>51</line>
-          <properties class="com.playshop.dao.PersonDAO" method="create">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="((ResultSetImpl)res).session" custom="com.mysql.cj.jdbc.result.ResultSetImpl" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
