@@ -34,7 +34,7 @@ public class ItemServlet extends HttpServlet {
                 Item item = new Item("","",0, 0);
                 request.setAttribute("item", item);
                 request.setAttribute("exception", "Input data is not correct");
-                request.getRequestDispatcher("/WEB-INF/jsp/edit_item.jsp").forward(request, response);
+                request.getRequestDispatcher("/edit_item.jsp").forward(request, response);
             } catch (Exception e1) {
                 response.sendRedirect("error");
             }
@@ -52,7 +52,7 @@ public class ItemServlet extends HttpServlet {
         if (action == null) {
             try {
                 request.setAttribute("items", personService.getItems(person));
-                request.getRequestDispatcher("/WEB-INF/jsp/view_items.jsp").forward(request, response);
+                request.getRequestDispatcher("/view_items.jsp").forward(request, response);
             } catch (DBException e) {
                 response.sendRedirect("error");
             }
@@ -65,7 +65,7 @@ public class ItemServlet extends HttpServlet {
             try {
                 Item item = personService.getItem(Integer.parseInt(itemIdString));
                 request.setAttribute("item", item);
-                request.getRequestDispatcher("/WEB-INF/jsp/view_items.jsp").forward(request, response);
+                request.getRequestDispatcher("/view_items.jsp").forward(request, response);
             } catch (DBException e) {
                 response.sendRedirect("error");
             }
@@ -86,7 +86,7 @@ public class ItemServlet extends HttpServlet {
                     try {
                         Item item = adminService.getItem(Integer.parseInt(itemIdString));
                         request.setAttribute("item", item);
-                        request.getRequestDispatcher("/WEB-INF/jsp/edit_item.jsp").forward(request, response);
+                        request.getRequestDispatcher("/edit_item.jsp").forward(request, response);
                     } catch (DBException e) {
                         response.sendRedirect("error");
                     }
@@ -94,7 +94,7 @@ public class ItemServlet extends HttpServlet {
                 } else if (action.equalsIgnoreCase("add")) {
                     Item item = new Item("", "", 0, 0);
                     request.setAttribute("item", item);
-                    request.getRequestDispatcher("/WEB-INF/jsp/edit_item.jsp").forward(request, response);
+                    request.getRequestDispatcher("/edit_item.jsp").forward(request, response);
                 } else {
                     response.sendRedirect("error");
                 }

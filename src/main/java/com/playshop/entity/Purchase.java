@@ -38,10 +38,6 @@ public class Purchase {
         this.quantity = quantity;
     }
 
-    public void setCost(float cost) {
-        this.cost = cost;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

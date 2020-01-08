@@ -23,7 +23,7 @@ public class PurchaseServlet extends HttpServlet {
             AdminService adminService = new AdminServiceImplements();
             try {
                 request.setAttribute("purchases", adminService.getPurchases());
-                request.getRequestDispatcher("/WEB-INF/jsp/view_purchases.jsp").forward(request, response);
+                request.getRequestDispatcher("/view_purchases.jsp").forward(request, response);
             } catch (DBException e) {
                 response.sendRedirect("error");
             }

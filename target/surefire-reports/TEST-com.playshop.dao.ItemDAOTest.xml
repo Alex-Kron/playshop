@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="com.playshop.dao.ItemDAOTest" time="0.151" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.playshop.dao.ItemDAOTest" time="50.805" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10-post-Ubuntu-0ubuntu1.118.04"/>
@@ -62,11 +62,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="create" time="0.018"/>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="delete" time="0.017"/>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="getAll" time="0.017"/>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="update" time="0.019"/>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="deleteAll" time="0.025"/>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="get" time="0.026"/>
-  <testcase classname="com.playshop.dao.ItemDAOTest" name="getId" time="0.029"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="create" time="4.715"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="delete" time="4.444"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="getAll" time="4.489"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="update" time="6.7"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="deleteAll" time="6.126"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="get" time="14.077"/>
+  <testcase classname="com.playshop.dao.ItemDAOTest" name="getId" time="10.254"/>
 </testsuite>
