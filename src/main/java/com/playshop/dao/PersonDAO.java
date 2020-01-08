@@ -8,9 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonDAO {
-    private Connection connection = DBService.getConnection();
+    private Connection connection;
 
-    public PersonDAO() throws SQLException {}
+    public PersonDAO() throws SQLException {
+        this(false);
+    }
+
+    public PersonDAO(boolean testBase) {
+        if (testBase) {
+            connection = DBService.getTestConnection();
+        } else {
+            connection = DBService.getConnection();
+        }
+    }
 
     public Person get(int id) throws SQLException {
         String sql = "SELECT * FROM users WHERE id=?";
@@ -95,6 +105,10 @@ public class PersonDAO {
         String sql = "DELETE FROM users";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.execute();
+        statement.execute("ALTER TABLE users AUTO_INCREMENT = 1");
     }
 
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
 }

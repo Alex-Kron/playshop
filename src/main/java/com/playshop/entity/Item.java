@@ -1,5 +1,7 @@
 package com.playshop.entity;
 
+import java.util.Objects;
+
 public class Item {
     private int quantity;
     private String name;
@@ -42,5 +44,21 @@ public class Item {
 
     public void setCost(float cost) {
         this.cost = cost;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Item)) return false;
+        Item item = (Item) o;
+        return getQuantity() == item.getQuantity() &&
+                Float.compare(item.getCost(), getCost()) == 0 &&
+                getName().equals(item.getName()) &&
+                getDescription().equals(item.getDescription());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getQuantity(), getName(), getDescription(), getCost());
     }
 }

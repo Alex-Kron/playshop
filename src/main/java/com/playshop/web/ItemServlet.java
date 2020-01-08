@@ -135,7 +135,7 @@ public class ItemServlet extends HttpServlet {
             }
 
             float price = Integer.valueOf(priceString);
-            Integer amount = Integer.parseInt(amountString);
+            int amount = Integer.parseInt(amountString);
             return new Item(title, description, amount, price);
         } catch (Exception e){
             throw new ServiceException("Error added items", e);

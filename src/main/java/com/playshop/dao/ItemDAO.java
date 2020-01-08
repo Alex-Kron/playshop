@@ -8,9 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemDAO {
-    private Connection connection = DBService.getConnection();
+    private Connection connection;
 
-    public ItemDAO() throws SQLException {}
+    public ItemDAO() throws SQLException {
+        this(false);
+    }
+
+    public ItemDAO(boolean testBase) {
+        if (testBase) {
+            connection = DBService.getTestConnection();
+        } else {
+            connection = DBService.getConnection();
+        }
+    }
 
     public Item get(int id) throws SQLException {
         String sql = "SELECT * FROM katalog WHERE id=?";
@@ -85,5 +95,10 @@ public class ItemDAO {
         String sql = "DELETE FROM katalog";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.execute();
+        statement.execute("ALTER TABLE katalog AUTO_INCREMENT = 1");
+    }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
     }
 }

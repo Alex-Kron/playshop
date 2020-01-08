@@ -8,9 +8,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PurchaseDAO {
-    private Connection connection = DBService.getConnection();
+    private Connection connection;
 
-    public PurchaseDAO() throws SQLException {}
+    public PurchaseDAO() throws SQLException {
+        this(false);
+    }
+
+    public PurchaseDAO(boolean testBase) {
+        if (testBase) {
+            connection = DBService.getTestConnection();
+        } else {
+            connection = DBService.getConnection();
+        }
+    }
 
     public Purchase get(int id) throws SQLException {
         String sql = "SELECT * FROM purchase WHERE id=?";
@@ -59,6 +69,7 @@ public class PurchaseDAO {
         statement.setInt(2,purchase.getItemID());
         statement.setInt(3,purchase.getQuantity());
         ItemDAO tmp = new ItemDAO();
+        tmp.setConnection(connection);
         float cost = tmp.get(purchase.getItemID()).getCost() * purchase.getQuantity();
         statement.setFloat(4, cost);
         statement.execute();
@@ -76,5 +87,10 @@ public class PurchaseDAO {
         String sql = "DELETE FROM purchase";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.execute();
+        statement.execute("ALTER TABLE purchase AUTO_INCREMENT = 1");
+    }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
     }
 }

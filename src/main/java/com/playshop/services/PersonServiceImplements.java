@@ -18,8 +18,12 @@ public class PersonServiceImplements implements PersonService {
 
     @Override
     public Person signIn(String name, String password) throws DBException {
+        return signIn(name, password, false);
+    }
+
+    public Person signIn(String name, String password, boolean test) throws DBException {
         try {
-            PersonDAO dao = new PersonDAO();
+            PersonDAO dao = new PersonDAO(test);
             Person person = dao.getByName(name);
             if (person == null || !person.getPassword().equals(password)){
                 return null;
@@ -39,8 +43,12 @@ public class PersonServiceImplements implements PersonService {
 
     @Override
     public Person signUp(String name, String password, String role) throws DBException {
+        return signUp(name, password, role, false);
+    }
+
+    public Person signUp(String name, String password, String role, boolean test) throws DBException {
         try {
-            PersonDAO dao = new PersonDAO();
+            PersonDAO dao = new PersonDAO(test);
             int id = dao.create(new Person(name, password, role));
             Person person = dao.get(id);
             logger.fine("Person registered: " + person);
@@ -52,8 +60,12 @@ public class PersonServiceImplements implements PersonService {
 
     @Override
     public Item getItem(int id) throws DBException {
+        return getItem(id, false);
+    }
+
+    public Item getItem(int id, boolean test) throws DBException {
         try {
-            ItemDAO dao = new ItemDAO();
+            ItemDAO dao = new ItemDAO(test);
             Item item = dao.get(id);
             return item;
 
@@ -64,8 +76,12 @@ public class PersonServiceImplements implements PersonService {
 
     @Override
     public List<Item> getItems(Person person) throws DBException {
+        return getItems(person, false);
+    }
+
+    public List<Item> getItems(Person person, boolean test) throws DBException {
         try {
-            ItemDAO dao = new ItemDAO();
+            ItemDAO dao = new ItemDAO(test);
             List<Item> items = dao.getAll();
             if (person.getRole() == "admin"){
                 items.sort(Comparator.comparing(Item::getName));

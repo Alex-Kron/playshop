@@ -1,5 +1,7 @@
 package com.playshop.entity;
 
+import java.util.Objects;
+
 public class Person {
 
     private String username;
@@ -32,5 +34,20 @@ public class Person {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+        Person person = (Person) o;
+        return getUsername().equals(person.getUsername()) &&
+                getPassword().equals(person.getPassword()) &&
+                getRole().equals(person.getRole());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUsername(), getPassword(), getRole());
     }
 }

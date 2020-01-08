@@ -18,21 +18,26 @@ public class UserServiceImplements extends PersonServiceImplements implements Us
 
     @Override
     public void setPurchase(int itemId, int amount, Person person) throws DBException, ServiceException {
+        setPurchase(itemId, amount, person, false);
+    }
+
+    public void setPurchase(int itemId, int amount, Person person, boolean test) throws DBException, ServiceException {
         try {
-            ItemDAO itemDAO = new ItemDAO();
+            ItemDAO itemDAO = new ItemDAO(test);
             Item item = itemDAO.get(itemId);
 
             if (!checkConditionPurchase(item, amount)) {
                 throw new ServiceException("No item for purchase");
             }
 
-            int personId = new PersonDAO().getId(person);
+            int personId = new PersonDAO(test).getId(person);
 
             Purchase purchase = new Purchase(personId, itemId, amount);
-            PurchaseDAO purchaseDAO = new PurchaseDAO();
+            PurchaseDAO purchaseDAO = new PurchaseDAO(test);
             int purchaseId = purchaseDAO.create(purchase);
             purchase = purchaseDAO.get(purchaseId);
             item.setQuantity(item.getQuantity() - amount);
+            itemDAO.update(itemId, item);
             logger.fine("Item purchased: " + purchase);
         } catch (SQLException e) {
             throw new DBException(e);

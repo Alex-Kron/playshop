@@ -1,0 +1,6 @@
+com/playshop/dao/PurchaseDAOTest.class
+com/playshop/services/UserServiceImplementsTest.class
+com/playshop/services/PersonServiceImplementsTest.class
+com/playshop/dao/ItemDAOTest.class
+com/playshop/services/AdminServiceImplementsTest.class
+com/playshop/dao/PersonDAOTest.class
