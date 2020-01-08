@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.playshop.services.PersonServiceImplementsTest" time="382.282" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.playshop.services.PersonServiceImplementsTest" time="0.223" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10-post-Ubuntu-0ubuntu1.118.04"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="/home/kron/Idea/idea-IU-193.5662.53/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.1 test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.1 install"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -62,8 +62,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="signIn" time="85.341"/>
-  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="signUp" time="75.592"/>
-  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="getItem" time="74.307"/>
-  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="getItems" time="147.042"/>
+  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="signIn" time="0.047"/>
+  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="signUp" time="0.052"/>
+  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="getItem" time="0.049"/>
+  <testcase classname="com.playshop.services.PersonServiceImplementsTest" name="getItems" time="0.075"/>
 </testsuite>

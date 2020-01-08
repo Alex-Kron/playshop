@@ -18,7 +18,7 @@ public abstract class DBService {
 
     private static Connection setConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(url, dbUser, dbPassword);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -28,7 +28,7 @@ public abstract class DBService {
 
     private static Connection setTestConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(urlTest, dbUser, dbPassword);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

@@ -27,9 +27,6 @@ public class AdminServiceImplementsTest {
         itemDAO = new ItemDAO(true);
         personDAO = new PersonDAO(true);
         purchaseDAO = new PurchaseDAO(true);
-        itemDAO.deleteAll();
-        personDAO.deleteAll();
-        purchaseDAO.deleteAll();
     }
 
     @Before
