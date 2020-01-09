@@ -28,7 +28,7 @@ public class PurchaseDAO {
         statement.setInt(1, id);
         ResultSet res = statement.executeQuery();
         if (res.first()) {
-            return new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"));
+            return new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"), res.getFloat("cost"));
         } else {
             return null;
         }
@@ -40,7 +40,7 @@ public class PurchaseDAO {
         ResultSet res = statement.executeQuery();
         ArrayList<Purchase> list = new ArrayList<>();
         while (res.next()) {
-            list.add(new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity")));
+            list.add(new Purchase(res.getInt("user_id"), res.getInt("item_id"), res.getInt("quantity"), res.getFloat("cost")));
         }
         if (!list.isEmpty()) {
             return list;

@@ -32,12 +32,23 @@
             <c:forEach items="${purchases}" var="purchase">
                 <jsp:useBean id="purchase" type="com.playshop.entity.Purchase"/>
                 <tr>
-                    <%String username = new PersonDAO().get(purchase.getUserID()).getUsername();%>
-                    <%String itemname = new ItemDAO().get(purchase.getItemID()).getName();%>
-                    <%float cost = new ItemDAO().get(purchase.getItemID()).getCost();%>
+                    <%Person user = new PersonDAO().get(purchase.getUserID());%>
+                    <%Item item = new ItemDAO().get(purchase.getItemID());%>
+                    <%String username;
+                    String itemname;
+                    if (user == null) {
+                        username = "User is deleted";
+                    } else {
+                        username = user.getUsername();
+                    }
+                    if (item == null) {
+                        itemname = "Item is deleted";
+                    } else {
+                        itemname = item.getName();
+                    }%>
                     <td><%out.print(username);%></td>
                     <td><a href="items?id=${purchase.itemID}&action=view"><%out.print(itemname);%></a></td>
-                    <td><%=NumberFormat.getCurrencyInstance().format(purchase.getQuantity() * cost)%></td>
+                    <td><%=NumberFormat.getCurrencyInstance().format(purchase.getCost())%></td>
                     <td>${purchase.quantity}</td>
                 </tr>
             </c:forEach>

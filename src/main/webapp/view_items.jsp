@@ -28,10 +28,8 @@
         <tr>
             <th>Item</th>
             <th>Price</th>
-            <c:if test="${role == 'admin'}">
-                <th>Amount</th>
-                <th></th>
-            </c:if>
+            <th>Amount</th>
+            <th></th>
             <th></th>
         </tr>
         <jsp:useBean id="items" scope="request" type="java.util.List"/>
@@ -40,8 +38,8 @@
             <tr>
                 <td><a href="items?id=${item.id}&action=view">${item.name}</a></td>
                 <td><%=NumberFormat.getCurrencyInstance().format(item.getCost())%></td>
+                <td>${item.quantity}</td>
                 <c:if test="${role == 'admin'}">
-                    <td>${item.quantity}</td>
                     <td><a href="items?id=${item.id}&action=delete">Delete</a></td>
                     <td><a href="items?id=${item.id}&action=edit">Edit</a></td>
                 </c:if>

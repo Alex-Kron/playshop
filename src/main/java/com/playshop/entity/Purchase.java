@@ -6,11 +6,17 @@ public class Purchase {
     private int userID;
     private int itemID;
     private int quantity;
+    private float cost;
 
     public Purchase(int uid, int iid, int q) {
         userID = uid;
         itemID = iid;
         quantity = q;
+    }
+
+    public Purchase(int uid, int iid, int q, float c) {
+        this(uid, iid, q);
+        cost = c;
     }
 
     public int getUserID() {
@@ -35,6 +41,14 @@ public class Purchase {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
     }
 
     @Override
