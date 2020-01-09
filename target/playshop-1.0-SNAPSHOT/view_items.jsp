@@ -40,11 +40,8 @@
             <jsp:useBean id="item" type="com.playshop.entity.Item"/>
             <tr>
                 <td><a href="items?id=${item.id}&action=view">${item.name}</a></td>
-                <%--<td>${item.price}</td>--%>
                 <td><%=NumberFormat.getCurrencyInstance().format(item.getCost())%></td>
                 <c:if test="${role == 'admin'}">
-                    <%--<td><a href="item?id=${item.id}&action=delete"><img src="img/delete.png"></a></td>--%>
-                    <%--<td><a href="item?id=${item.id}&action=edit"><img src="img/pencil.png"></a></td>--%>
                     <td>${item.quantity}</td>
                     <td><a href="items?id=${item.id}&action=delete">Delete</a></td>
                     <td><a href="items?id=${item.id}&action=edit">Edit</a></td>

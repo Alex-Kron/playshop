@@ -37,8 +37,6 @@
                     <%float cost = new ItemDAO().get(purchase.getItemID()).getCost();%>
                     <td><%out.print(username);%></td>
                     <td><a href="items?id=${purchase.itemID}&action=view"><%out.print(itemname);%></a></td>
-                    <%--<td>${purchase.dateTime}</td>--%>
-                    <%--<td>${purchase.cost}</td>--%>
                     <td><%=NumberFormat.getCurrencyInstance().format(purchase.getQuantity() * cost)%></td>
                     <td>${purchase.quantity}</td>
                 </tr>

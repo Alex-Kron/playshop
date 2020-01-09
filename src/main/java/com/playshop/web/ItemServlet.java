@@ -65,7 +65,7 @@ public class ItemServlet extends HttpServlet {
             try {
                 Item item = personService.getItem(Integer.parseInt(itemIdString));
                 request.setAttribute("item", item);
-                request.getRequestDispatcher("/view_items.jsp").forward(request, response);
+                request.getRequestDispatcher("/view_item.jsp").forward(request, response);
             } catch (DBException e) {
                 response.sendRedirect("error");
             }

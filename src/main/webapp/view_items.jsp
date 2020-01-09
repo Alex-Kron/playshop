@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Items - Webstore</title>
+    <title>Items - Playshop</title>
 </head>
 <body>
 <jsp:useBean id="person" scope="session" type="com.playshop.entity.Person"/>
@@ -18,9 +18,8 @@
 <section>
     <c:set var="role" scope="request" value="${person.role}"/>
     <c:if test="${role == 'admin'}">
-        [Items]&nbsp;[<a href="purchases">Purchases</a>]<br/>
+        [Items]&nbsp;[<a href="purchases">Purchases</a>] [<a href="users">User list</a><br/>
         <hr>
-        <%--<a href="items?action=add"><img src="img/add.png"></a>--%>
         <a href="items?action=add">Add item</a>
         <br/><br/>
     </c:if>
@@ -40,11 +39,8 @@
             <jsp:useBean id="item" type="com.playshop.entity.Item"/>
             <tr>
                 <td><a href="items?id=${item.id}&action=view">${item.name}</a></td>
-                <%--<td>${item.price}</td>--%>
                 <td><%=NumberFormat.getCurrencyInstance().format(item.getCost())%></td>
                 <c:if test="${role == 'admin'}">
-                    <%--<td><a href="item?id=${item.id}&action=delete"><img src="img/delete.png"></a></td>--%>
-                    <%--<td><a href="item?id=${item.id}&action=edit"><img src="img/pencil.png"></a></td>--%>
                     <td>${item.quantity}</td>
                     <td><a href="items?id=${item.id}&action=delete">Delete</a></td>
                     <td><a href="items?id=${item.id}&action=edit">Edit</a></td>

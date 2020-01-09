@@ -18,12 +18,10 @@
     <c:set var="role" scope="request" value="${person.role}"/>
     <h1>${item.name}</h1>
     <c:if test="${role == 'admin'}">
-        <%--<a href="items?action=add"><img src="img/add.png"></a>--%>
         <a href="items?id=${item.id}&action=edit">Edit</a>
         <br/>
     </c:if>
     <c:if test="${role == 'user'}">
-        <%--<a href="items?action=add"><img src="img/add.png"></a>--%>
         <a href="items?id=${item.id}&action=buy">Buy</a>
         <br/>
     </c:if>
@@ -35,7 +33,6 @@
         </tr>
         <tr>
             <td><strong>Price</strong></td>
-            <%--<td>${item.price}</td>--%>
             <td><%=NumberFormat.getCurrencyInstance().format(item.getCost())%>
             </td>
         </tr>

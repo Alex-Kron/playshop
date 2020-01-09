@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.playshop.dao.PurchaseDAOTest" time="0.171" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.playshop.dao.PurchaseDAOTest" time="0.148" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10-post-Ubuntu-0ubuntu1.118.04"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="/home/kron/Idea/idea-IU-193.5662.53/plugins/maven/lib/maven3/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.1 package"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.3.1 install"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,9 +63,9 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="com.playshop.dao.PurchaseDAOTest" name="create" time="0.025"/>
-  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="delete" time="0.027"/>
-  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="getAll" time="0.028"/>
-  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="deleteAll" time="0.042"/>
-  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="get" time="0.028"/>
-  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="getId" time="0.021"/>
+  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="delete" time="0.021"/>
+  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="getAll" time="0.02"/>
+  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="deleteAll" time="0.033"/>
+  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="get" time="0.027"/>
+  <testcase classname="com.playshop.dao.PurchaseDAOTest" name="getId" time="0.022"/>
 </testsuite>

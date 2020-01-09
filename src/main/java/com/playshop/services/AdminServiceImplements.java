@@ -126,6 +126,22 @@ public class AdminServiceImplements extends PersonServiceImplements implements A
     }
 
     @Override
+    public void setUser(int id) throws DBException {
+        setUser(id, false);
+    }
+    public void setUser(int id, boolean test) throws DBException {
+        try {
+            PersonDAO dao = new PersonDAO(test);
+            Person person = dao.get(id);
+            person.setRole("user");
+            dao.update(id, person);
+            logger.fine("Set user " + id + " - admin");
+        } catch (SQLException e) {
+            throw new DBException(e);
+        }
+    }
+
+    @Override
     public void deleteAllPurchases() throws DBException {
         deleteAllPurchases(false);
     }
@@ -149,6 +165,63 @@ public class AdminServiceImplements extends PersonServiceImplements implements A
         try {
             PurchaseDAO dao = new PurchaseDAO(test);
             return dao.getAll();
+        } catch (SQLException e) {
+            throw new DBException(e);
+        }
+    }
+
+    @Override
+    public List<Person> getAllPerson() throws DBException {
+        return getAllPerson(false);
+    }
+
+    public List<Person> getAllPerson(boolean test) throws DBException {
+        try {
+            PersonDAO dao = new PersonDAO(test);
+            return dao.getAll();
+        } catch (SQLException e) {
+            throw new DBException(e);
+        }
+    }
+
+    @Override
+    public void deletePerson(int id) throws DBException {
+        deletePerson(id, false);
+    }
+
+    public void deletePerson(int id, boolean test) throws DBException {
+        PersonDAO dao = null;
+        try {
+            dao = new PersonDAO(test);
+            dao.delete(id);
+        } catch (SQLException e) {
+            throw new DBException(e);
+        }
+    }
+
+    @Override
+    public int getPersonId(String name) throws DBException {
+        return getPersonId(name, false);
+    }
+
+    public int getPersonId(String name, boolean test) throws DBException {
+        try {
+            PersonDAO dao = new PersonDAO(test);
+            return dao.getId(dao.getByName(name));
+        } catch (SQLException e) {
+            throw new DBException(e);
+        }
+    }
+
+    @Override
+    public Person getPerson(int id) throws DBException {
+        return getPerson(id, false);
+    }
+
+    public Person getPerson(int id, boolean test) throws DBException {
+        try {
+            PersonDAO dao = new PersonDAO(test);
+            return dao.get(id);
         } catch (SQLException e) {
             throw new DBException(e);
         }
