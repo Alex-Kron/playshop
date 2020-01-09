@@ -18,7 +18,7 @@
 <section>
     <c:set var="role" scope="request" value="${person.role}"/>
     <c:if test="${role == 'admin'}">
-        [Items]&nbsp;[<a href="purchases">Purchases</a>] [<a href="users">User list</a><br/>
+        [Items]&nbsp;[<a href="purchases">Purchases</a>] [<a href="users">User list</a>]<br/>
         <hr>
         <a href="items?action=add">Add item</a>
         <br/><br/>

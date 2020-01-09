@@ -52,10 +52,14 @@ public class UserServlet extends HttpServlet {
             try {
                 if (adminService.getPerson(adminService.getPersonId(username)).getRole().equals("admin")) {
                     adminService.setUser(adminService.getPersonId(username));
+                    request.setAttribute("users", adminService.getAllPerson());
+                    request.getRequestDispatcher("/user_list.jsp").forward(request, response);
                 } else {
                     if (adminService.getPerson(adminService.getPersonId(username)).getRole().equals("user")) {
                         adminService.setAdmin(adminService.getPersonId(username));
-                    }
+                        request.setAttribute("users", adminService.getAllPerson());
+                        request.getRequestDispatcher("/user_list.jsp").forward(request, response);
+                    } else throw new DBException("Empty role");
                 }
             } catch (DBException e) {
                 response.sendRedirect("error");

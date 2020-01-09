@@ -30,8 +30,8 @@
                 <td>${user.username}</td>
                 <td>${user.password}</td>
                 <td>${user.role}</td>
-                <td><a href="items?id=${user.username}&action=delete">Delete</a></td>
-                <td><a href="items?id=${user.username}&action=change">Change role</a></td>
+                <td><a href="users?name=${user.username}&action=delete">Delete</a></td>
+                <td><a href="users?name=${user.username}&action=change">Change role</a></td>
             </tr>
         </c:forEach>
     </table>

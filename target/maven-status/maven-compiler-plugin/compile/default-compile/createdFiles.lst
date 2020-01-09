@@ -4,6 +4,7 @@ com/playshop/web/filter/LoggingFilter.class
 com/playshop/web/SignUpServlet.class
 com/playshop/entity/Item.class
 com/playshop/services/PersonService.class
+com/playshop/web/filter/UsersFilter.class
 com/playshop/entity/Purchase.class
 com/playshop/web/filter/SignInFilter.class
 com/playshop/services/UserService.class
@@ -12,6 +13,7 @@ com/playshop/exceptions/ServiceException.class
 com/playshop/services/PersonServiceImplements.class
 com/playshop/web/filter/PurchasesFilter.class
 com/playshop/services/DBService.class
+com/playshop/web/UserServlet.class
 com/playshop/web/filter/ErrorFilter.class
 com/playshop/dao/PurchaseDAO.class
 com/playshop/entity/Person.class

@@ -21,12 +21,12 @@ public class UsersFilter implements Filter {
         if (session != null && session.getAttribute("person") != null) {
             Person person = (Person) session.getAttribute("person");
             if (person.getRole().equals("admin")){
-                chain.doFilter(request, response);
+                request.getRequestDispatcher("/users").forward(request,response);
             } else {
-                request.getRequestDispatcher("/signup").forward(request,response);
+                request.getRequestDispatcher("/signin").forward(request,response);
             }
         } else {
-            request.getRequestDispatcher("/signup").forward(request,response);
+            request.getRequestDispatcher("/signin").forward(request,response);
         }
     }
 
