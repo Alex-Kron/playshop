@@ -28,7 +28,8 @@ public class ItemDAO {
         statement.setInt(1, id);
         ResultSet res = statement.executeQuery();
         if (res.first()) {
-            return new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"));
+            Item i = new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"), id);
+            return i;
         } else {
             return null;
         }
@@ -41,6 +42,7 @@ public class ItemDAO {
         statement.setFloat(2, i.getCost());
         ResultSet res = statement.executeQuery();
         if (res.first()) {
+            i.setId(res.getInt("id"));
             return res.getInt("id");
         } else {
             return -1;
@@ -53,7 +55,7 @@ public class ItemDAO {
         ResultSet res = statement.executeQuery();
         ArrayList<Item> list = new ArrayList<>();
         while (res.next()) {
-            list.add(new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost")));
+            list.add(new Item(res.getString("name"), res.getString("description"), res.getInt("quantity"), res.getFloat("cost"), res.getInt("id")));
         }
         if (!list.isEmpty()) {
             return list;
@@ -70,7 +72,8 @@ public class ItemDAO {
         statement.setString(3, i.getDescription());
         statement.setFloat(4, i.getCost());
         statement.execute();
-        return getId(i);
+        i.setId(getId(i));
+        return i.getId();
     }
 
     public void update(int id, Item i) throws SQLException {

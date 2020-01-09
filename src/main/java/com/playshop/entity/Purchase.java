@@ -6,7 +6,6 @@ public class Purchase {
     private int userID;
     private int itemID;
     private int quantity;
-    private float cost;
 
     public Purchase(int uid, int iid, int q) {
         userID = uid;
@@ -45,12 +44,11 @@ public class Purchase {
         Purchase purchase = (Purchase) o;
         return getUserID() == purchase.getUserID() &&
                 getItemID() == purchase.getItemID() &&
-                getQuantity() == purchase.getQuantity() &&
-                Float.compare(purchase.cost, cost) == 0;
+                getQuantity() == purchase.getQuantity();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserID(), getItemID(), getQuantity(), cost);
+        return Objects.hash(getUserID(), getItemID(), getQuantity());
     }
 }

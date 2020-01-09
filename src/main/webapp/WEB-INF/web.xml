@@ -4,7 +4,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>Playshop</display-name>
-
     <servlet>
         <servlet-name>SignInServlet</servlet-name>
         <servlet-class>com.playshop.web.SignInServlet</servlet-class>
@@ -40,7 +39,6 @@
         <servlet-name>PurchaseServlet</servlet-name>
         <url-pattern>/purchases</url-pattern>
     </servlet-mapping>
-
 
     <filter>
         <filter-name>ErrorFilter</filter-name>

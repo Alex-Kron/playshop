@@ -7,31 +7,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40295adf-7436-4206-a42f-e584c188fa4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/playshop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/playshop_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/playshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/services/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/services/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/dao/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/dao/ItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/entity/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/web/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/web/ItemServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/web/SignInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/web/SignInServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/web/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/web/SignUpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/playshop/web/filter/SignUpFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/playshop/web/filter/SignUpFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/edit_item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit_item.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sign_in.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sign_in.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sign_up.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sign_up.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sign_in.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sign_up.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view_item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view_item.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view_items.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view_items.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view_purchases.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view_purchases.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/playshop/services/AdminServiceImplementsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/playshop/services/AdminServiceImplementsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/services/DBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/services/DBService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/dao/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/dao/ItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/entity/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/entity/Purchase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/entity/Purchase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/web/ItemServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/web/ItemServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/web/SignInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/web/SignInServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/web/SignUpServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/web/SignUpServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/playshop/web/filter/SignUpFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/playshop/web/filter/SignUpFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/dao/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/dao/ItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/entity/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/entity/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/entity/Purchase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/entity/Purchase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/ItemServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/ItemServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/SignInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/SignInServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/SignUpServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/SignUpServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/filter/SignUpFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/classes/com/playshop/web/filter/SignUpFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/edit_item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/edit_item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/sign_in.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/sign_up.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/view_item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/view_item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/view_items.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/view_items.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/view_purchases.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/playshop-1.0-SNAPSHOT/view_purchases.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.dao.ItemDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.dao.ItemDAOTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.dao.PersonDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.dao.PersonDAOTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.dao.PurchaseDAOTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.dao.PurchaseDAOTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.services.AdminServiceImplementsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.services.AdminServiceImplementsTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.services.PersonServiceImplementsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.services.PersonServiceImplementsTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.services.UserServiceImplementsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.playshop.services.UserServiceImplementsTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.playshop.dao.ItemDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.playshop.dao.ItemDAOTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.playshop.dao.PersonDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.playshop.dao.PersonDAOTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.playshop.dao.PurchaseDAOTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.playshop.dao.PurchaseDAOTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.playshop.services.AdminServiceImplementsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.playshop.services.AdminServiceImplementsTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.playshop.services.PersonServiceImplementsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.playshop.services.PersonServiceImplementsTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.playshop.services.UserServiceImplementsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.playshop.services.UserServiceImplementsTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire13859258343726200461tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefire_014565366403685843763tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter16108582773368295488.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/playshop/services/AdminServiceImplementsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/playshop/services/AdminServiceImplementsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +165,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/playshop/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -145,24 +176,24 @@
       <recent name="com.playshop.services" />
       <recent name="com.playshop.dao" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/playshop/web" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/lib" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.playshop.exceptions" />
       <recent name="com.playshop.services" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/web" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/playshop/web" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/web/WEB-INF/jsp" />
     </key>
   </component>
@@ -360,7 +391,7 @@
       <workItem from="1577970985812" duration="16522000" />
       <workItem from="1578152291600" duration="31702000" />
       <workItem from="1578394368000" duration="61038000" />
-      <workItem from="1578514550315" duration="2104000" />
+      <workItem from="1578514550315" duration="13922000" />
     </task>
     <servers />
   </component>
@@ -395,18 +426,18 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="666" y="257" width="655" height="598" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1577448878249" />
-    <state x="568" y="211" width="1292" height="831" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578497887064">
+    <state x="568" y="211" width="1292" height="831" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578528194540">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state x="568" y="211" width="1292" height="831" key="#com.intellij.execution.impl.EditConfigurationsDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1578497887064" />
+    <state x="568" y="211" width="1292" height="831" key="#com.intellij.execution.impl.EditConfigurationsDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1578528194540" />
     <state x="614" y="343" width="758" height="425" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577352977857">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="614" y="343" width="758" height="425" key="#com.intellij.fileTypes.FileTypeChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1577352977857" />
-    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser" timestamp="1578486525697">
+    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser" timestamp="1578517862722">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1578486525697" />
+    <state x="1084" y="193" width="468" height="735" key="#com.intellij.ide.util.MemberChooser/77.34.1843.1046@77.34.1843.1046" timestamp="1578517862722" />
     <state x="661" y="300" width="656" height="510" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578475191311">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
@@ -431,74 +462,74 @@
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
     <state x="666" y="246" width="655" height="619" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/77.34.1843.1046@77.34.1843.1046" timestamp="1578239898086" />
-    <state x="728" y="257" width="1088" height="598" key="FileChooserDialogImpl" timestamp="1578416293663">
+    <state x="728" y="257" width="1088" height="598" key="FileChooserDialogImpl" timestamp="1578516823619">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state x="728" y="257" width="1088" height="598" key="FileChooserDialogImpl/77.34.1843.1046@77.34.1843.1046" timestamp="1578416293663" />
-    <state width="1224" height="368" key="GridCell.Tab.0.bottom" timestamp="1578516395185">
+    <state x="728" y="257" width="1088" height="598" key="FileChooserDialogImpl/77.34.1843.1046@77.34.1843.1046" timestamp="1578516823619" />
+    <state width="1224" height="228" key="GridCell.Tab.0.bottom" timestamp="1578528220473">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578516395185" />
-    <state width="1224" height="368" key="GridCell.Tab.0.center" timestamp="1578516395175">
+    <state width="1224" height="228" key="GridCell.Tab.0.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220473" />
+    <state width="1224" height="228" key="GridCell.Tab.0.center" timestamp="1578528220470">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578516395175" />
-    <state width="1224" height="368" key="GridCell.Tab.0.left" timestamp="1578516395174">
+    <state width="1224" height="228" key="GridCell.Tab.0.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220470" />
+    <state width="1224" height="228" key="GridCell.Tab.0.left" timestamp="1578528220468">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578516395174" />
-    <state width="1224" height="368" key="GridCell.Tab.0.right" timestamp="1578516395176">
+    <state width="1224" height="228" key="GridCell.Tab.0.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220468" />
+    <state width="1224" height="228" key="GridCell.Tab.0.right" timestamp="1578528220473">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.0.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578516395176" />
-    <state width="1224" height="368" key="GridCell.Tab.1.bottom" timestamp="1578516394869">
+    <state width="1224" height="228" key="GridCell.Tab.0.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220473" />
+    <state width="1224" height="228" key="GridCell.Tab.1.bottom" timestamp="1578528220298">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394869" />
-    <state width="1224" height="368" key="GridCell.Tab.1.center" timestamp="1578516394868">
+    <state width="1224" height="228" key="GridCell.Tab.1.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220298" />
+    <state width="1224" height="228" key="GridCell.Tab.1.center" timestamp="1578528220298">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394868" />
-    <state width="1224" height="368" key="GridCell.Tab.1.left" timestamp="1578516394868">
+    <state width="1224" height="228" key="GridCell.Tab.1.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220298" />
+    <state width="1224" height="228" key="GridCell.Tab.1.left" timestamp="1578528220298">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394868" />
-    <state width="1224" height="368" key="GridCell.Tab.1.right" timestamp="1578516394868">
+    <state width="1224" height="228" key="GridCell.Tab.1.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220298" />
+    <state width="1224" height="228" key="GridCell.Tab.1.right" timestamp="1578528220298">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.1.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394868" />
-    <state width="1224" height="368" key="GridCell.Tab.2.bottom" timestamp="1578516394869">
+    <state width="1224" height="228" key="GridCell.Tab.1.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220298" />
+    <state width="1224" height="228" key="GridCell.Tab.2.bottom" timestamp="1578528220299">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394869" />
-    <state width="1224" height="368" key="GridCell.Tab.2.center" timestamp="1578516394869">
+    <state width="1224" height="228" key="GridCell.Tab.2.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220299" />
+    <state width="1224" height="228" key="GridCell.Tab.2.center" timestamp="1578528220299">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394869" />
-    <state width="1224" height="368" key="GridCell.Tab.2.left" timestamp="1578516394869">
+    <state width="1224" height="228" key="GridCell.Tab.2.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220299" />
+    <state width="1224" height="228" key="GridCell.Tab.2.left" timestamp="1578528220299">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394869" />
-    <state width="1224" height="368" key="GridCell.Tab.2.right" timestamp="1578516394869">
+    <state width="1224" height="228" key="GridCell.Tab.2.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220299" />
+    <state width="1224" height="228" key="GridCell.Tab.2.right" timestamp="1578528220299">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.2.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394869" />
-    <state width="1224" height="368" key="GridCell.Tab.3.bottom" timestamp="1578516394870">
+    <state width="1224" height="228" key="GridCell.Tab.2.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220299" />
+    <state width="1224" height="228" key="GridCell.Tab.3.bottom" timestamp="1578528220300">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.3.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394870" />
-    <state width="1224" height="368" key="GridCell.Tab.3.center" timestamp="1578516394870">
+    <state width="1224" height="228" key="GridCell.Tab.3.bottom/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220300" />
+    <state width="1224" height="228" key="GridCell.Tab.3.center" timestamp="1578528220300">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.3.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394870" />
-    <state width="1224" height="368" key="GridCell.Tab.3.left" timestamp="1578516394870">
+    <state width="1224" height="228" key="GridCell.Tab.3.center/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220300" />
+    <state width="1224" height="228" key="GridCell.Tab.3.left" timestamp="1578528220299">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.3.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394870" />
-    <state width="1224" height="368" key="GridCell.Tab.3.right" timestamp="1578516394870">
+    <state width="1224" height="228" key="GridCell.Tab.3.left/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220299" />
+    <state width="1224" height="228" key="GridCell.Tab.3.right" timestamp="1578528220300">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
-    <state width="1224" height="368" key="GridCell.Tab.3.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578516394870" />
+    <state width="1224" height="228" key="GridCell.Tab.3.right/77.34.1843.1046@77.34.1843.1046" timestamp="1578528220300" />
     <state width="1224" height="232" key="GridCell.Tab.4.bottom" timestamp="1578401057471">
       <screen x="77" y="34" width="1843" height="1046" />
     </state>
@@ -577,17 +608,34 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/playshop/web/ItemServlet.java</url>
-          <line>46</line>
-          <properties class="com.playshop.web.ItemServlet" method="doGet">
+          <line>18</line>
+          <properties class="com.playshop.web.ItemServlet" method="doPost">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/playshop/web/PurchaseServlet.java</url>
+          <line>19</line>
+          <properties class="com.playshop.web.PurchaseServlet" method="doGet">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/playshop/web/ItemServlet.java</url>
+          <line>121</line>
+          <properties class="com.playshop.web.ItemServlet" method="getItem">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="((ResultSetImpl)res).session" custom="com.mysql.cj.jdbc.result.ResultSetImpl" />
+        <watch expression="this.session" custom="javax.servlet.http.HttpServletRequestWrapper" />
       </configuration>
     </watches-manager>
   </component>

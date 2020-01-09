@@ -1,47 +1,50 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page errorPage="error.jsp" %>
-<%@ page import="com.playshop.entity.Person" %>
-<%@ page import="com.playshop.entity.Purchase" %>
-<%@ page import="java.util.List" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.text.NumberFormat" %>
 <%@ page import="com.playshop.dao.PersonDAO" %>
 <%@ page import="com.playshop.dao.ItemDAO" %>
-<%@ page import="java.text.NumberFormat" %>
+<%@ page import="com.playshop.entity.*" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Purchases - Playshop</title>
 </head>
 <body>
-<%Person person = (Person)session.getAttribute("person");%>
-<%String name = person.getUsername();%>
+<jsp:useBean id="person" scope="session" type="com.playshop.entity.Person"/>
+<c:set var="name" scope="request" value="${person.username}"/>
 <p>
-    Welcome, <%=name%><a href="logout">(logout)</a>
+    Welcome, ${name}&nbsp;<a href="logout">(logout)</a>
 </p>
 
 <section>
-    <%String role = person.getRole();%>
-    <%if (role.equals("admin")) {%>
+    <c:set var="role" scope="request" value="${person.role}"/>
+    <c:if test="${role == 'admin'}">
         [<a href="items">Items</a>]&nbsp;[Purchases]<br/>
         <hr>
         <table border="1" cellpadding="8" cellspacing="0">
             <tr>
                 <th>Buyer</th>
                 <th>Item</th>
-                <th>Date</th>
                 <th>Cost</th>
                 <th>Amount</th>
             </tr>
-            <%List<Purchase> list = (List)request.getAttribute("purchases");%>
-            <%for (Purchase purchase: list) {%>
+            <jsp:useBean id="purchases" scope="request" type="java.util.List"/>
+            <c:forEach items="${purchases}" var="purchase">
+                <jsp:useBean id="purchase" type="com.playshop.entity.Purchase"/>
                 <tr>
-                    <td><%=new PersonDAO().get(purchase.getUserID()).getUsername()%></td>
-                    <td><a href="items?id=<%=purchase.getItemID()%>&action=view"><%=new ItemDAO().get(purchase.getItemID()).getName()%></a></td>
-                    <td><%=NumberFormat.getCurrencyInstance().format(purchase.getQuantity() * new ItemDAO().get(purchase.getItemID()).getCost())%></td>
-                    <td><%=purchase.getQuantity()%></td>
+                    <%String username = new PersonDAO().get(purchase.getUserID()).getUsername();%>
+                    <%String itemname = new ItemDAO().get(purchase.getItemID()).getName();%>
+                    <%float cost = new ItemDAO().get(purchase.getItemID()).getCost();%>
+                    <td><%out.print(username);%></td>
+                    <td><a href="items?id=${purchase.itemID}&action=view"><%out.print(itemname);%></a></td>
+                    <%--<td>${purchase.dateTime}</td>--%>
+                    <%--<td>${purchase.cost}</td>--%>
+                    <td><%=NumberFormat.getCurrencyInstance().format(purchase.getQuantity() * cost)%></td>
+                    <td>${purchase.quantity}</td>
                 </tr>
-            <%}%>
+            </c:forEach>
         </table>
-    <%}%>
+    </c:if>
 </section>
 </body>
 </html>

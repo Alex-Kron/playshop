@@ -23,7 +23,7 @@ public class SignInServlet extends HttpServlet {
 
         if (login == null || password == null || login.isEmpty() || password.isEmpty()){
             request.setAttribute("exception", "Please check that all fields are filled in correctly and resend.");
-            request.getRequestDispatcher("/sign_in.jsp").forward(request, response);
+            request.getRequestDispatcher("/signin.jsp").forward(request, response);
             return;
         }
 
@@ -41,13 +41,13 @@ public class SignInServlet extends HttpServlet {
             response.sendRedirect("items");
         } else {
             request.setAttribute("exception", "The entered data is not correct.");
-            request.getRequestDispatcher("/sign_in.jsp").forward(request, response);
+            request.getRequestDispatcher("/signin.jsp").forward(request, response);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/sign_in.jsp").forward(request, response);
+        request.getRequestDispatcher("/signin.jsp").forward(request, response);
     }
 }
 

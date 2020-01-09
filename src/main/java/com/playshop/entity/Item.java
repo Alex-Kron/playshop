@@ -3,6 +3,7 @@ package com.playshop.entity;
 import java.util.Objects;
 
 public class Item {
+    private int id;
     private int quantity;
     private String name;
     private String description;
@@ -14,6 +15,12 @@ public class Item {
         description = d;
         cost = c;
     }
+
+    public Item(String n, String d, int q, float c, int i) {
+        this(n, d, q, c);
+        id = i;
+    }
+
     public int getQuantity() {
         return quantity;
     }
@@ -44,6 +51,14 @@ public class Item {
 
     public void setCost(float cost) {
         this.cost = cost;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

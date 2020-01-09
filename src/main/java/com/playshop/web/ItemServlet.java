@@ -127,14 +127,13 @@ public class ItemServlet extends HttpServlet {
             String priceString = request.getParameter("price");
             String amountString = request.getParameter("amount");
 
-            if (idString == null || idString.isEmpty()
-                    || title == null || title.isEmpty()
+            if (title == null || title.isEmpty()
                     || priceString == null || priceString.isEmpty()
                     || amountString == null || amountString.isEmpty()){
                 throw new ServiceException("A data-entry error");
             }
 
-            float price = Integer.valueOf(priceString);
+            float price = Float.parseFloat(priceString);
             int amount = Integer.parseInt(amountString);
             return new Item(title, description, amount, price);
         } catch (Exception e){

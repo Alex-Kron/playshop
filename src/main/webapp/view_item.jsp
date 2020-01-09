@@ -1,61 +1,50 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page errorPage="error.jsp" %>
-<%@ page import="com.playshop.entity.Item" %>
-<%@ page import="com.playshop.entity.Person" %>
-<%@ page import="com.playshop.dao.ItemDAO" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="java.text.*" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="com.playshop.entity.*" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <%Item item = (Item)request.getAttribute("item");%>
-    <title><%=out.print(item.getName())%> - Playshop</title>
+    <jsp:useBean id="item" scope="request" type="com.playshop.entity.Item"/>
+    <title>${item.name} - Webstore</title>
 </head>
 <body>
-<%Person person = (Person)session.getAttribute("person");%>
-<%String name = person.getUsername();%>
+<jsp:useBean id="person" scope="session" type="com.playshop.entity.Person"/>
+<c:set var="name" scope="request" value="${person.username}"/>
 <p>
-    Welcome, <%=out.print(name)%><a href="logout">(logout)</a>
+    Welcome, ${name}&nbsp;<a href="logout">(logout)</a>
 </p>
 <section>
-    <%String role = person.getRole();%>
-    <h1><%=out.print(role)%>;</h1>
-    <%if (role.equals("admin")) {%>
-        <a href="items?id=
-        <%try {
-            out.print(new ItemDAO().getId(item));
-        } catch (SQLException e) {
-            out.print(-1);
-        }%>&action=edit">Edit</a>
+    <c:set var="role" scope="request" value="${person.role}"/>
+    <h1>${item.name}</h1>
+    <c:if test="${role == 'admin'}">
+        <%--<a href="items?action=add"><img src="img/add.png"></a>--%>
+        <a href="items?id=${item.id}&action=edit">Edit</a>
         <br/>
-    <%}%>
-    <% if (role.equals("user")) {%>
-        <a href="items?id=
-        <% try {
-                out.print(new ItemDAO().getId(item));
-            } catch (SQLException e) {
-                out.print(-1);
-            }%>&action=buy">Buy</a>
+    </c:if>
+    <c:if test="${role == 'user'}">
+        <%--<a href="items?action=add"><img src="img/add.png"></a>--%>
+        <a href="items?id=${item.id}&action=buy">Buy</a>
         <br/>
-    <%}%>
+    </c:if>
     <hr/>
     <table cellpadding="2">
         <tr>
             <td><strong>Description</strong></td>
-            <td><%=out.print(item.getDescription())%></td>
+            <td>${item.description}</td>
         </tr>
         <tr>
             <td><strong>Price</strong></td>
-            <td><%=out.print(NumberFormat.getCurrencyInstance().format(item.getCost()))%>
+            <%--<td>${item.price}</td>--%>
+            <td><%=NumberFormat.getCurrencyInstance().format(item.getCost())%>
             </td>
         </tr>
-        <% if (role.equals("admin")) {%>
+        <c:if test="${role == 'admin'}">
             <tr>
                 <td><strong>Amount</strong></td>
-                <td><%=item.getQuantity()%></td>
+                <td>${item.quantity}</td>
             </tr>
-        <%}%>
+        </c:if>
     </table>
     <hr/>
     <button onclick="window.history.back()">Back</button>

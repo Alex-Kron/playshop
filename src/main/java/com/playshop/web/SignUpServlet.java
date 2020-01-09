@@ -26,7 +26,7 @@ public class SignUpServlet extends HttpServlet {
                 || login.isEmpty() || password.isEmpty() || retypePassword.isEmpty()
                 || !password.equals(retypePassword)){
             request.setAttribute("exception", "Please check that all fields are filled in correctly and resend.");
-            this.getServletContext().getRequestDispatcher("/sign_up.jsp").forward(request, response);
+            this.getServletContext().getRequestDispatcher("/signup.jsp").forward(request, response);
             return;
         }
 
@@ -39,16 +39,16 @@ public class SignUpServlet extends HttpServlet {
         }
 
         if (person != null) {
-            request.getRequestDispatcher("/sign_in.jsp").forward(request, response);
+            request.getRequestDispatcher("/signin.jsp").forward(request, response);
         } else {
             request.setAttribute("exception", "Registration error. Contact administrator.");
-            request.getRequestDispatcher("/sign_up.jsp").forward(request, response);
+            request.getRequestDispatcher("/signup.jsp").forward(request, response);
         }
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("/sign_up.jsp").forward(request, response);
+        request.getRequestDispatcher("/signup.jsp").forward(request, response);
     }
 }
 
